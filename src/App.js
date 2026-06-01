@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
@@ -28,13 +27,13 @@ function PublicRoute({ children }) {
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Landing />} />
+      <Route path="/"          element={<Navigate to="/login" replace />} />
       <Route path="/login"     element={<PublicRoute><Login /></PublicRoute>} />
       <Route path="/register"  element={<PublicRoute><Register /></PublicRoute>} />
       <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
       <Route path="/detect"    element={<PrivateRoute><Detect /></PrivateRoute>} />
       <Route path="/history"   element={<PrivateRoute><History /></PrivateRoute>} />
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="*"          element={<Navigate to="/login" replace />} />
     </Routes>
   );
 }
