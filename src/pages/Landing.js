@@ -239,21 +239,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section style={{ position: 'relative', zIndex: 2, padding: '80px 24px 120px', textAlign: 'center' }}>
-        <div className="glass-card" style={{ maxWidth: 640, margin: '0 auto', padding: '60px 40px', animation: 'glow-pulse 3s ease infinite' }}>
-          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '2.2rem', marginBottom: 16, letterSpacing: '-0.02em' }}>
-            Ready to Deploy?
-          </h2>
-          <p style={{ color: 'var(--text-secondary)', marginBottom: 36, fontSize: '1rem' }}>
-            Get instant access. No setup required. Backend already running on Render.
-          </p>
-          <Link to="/register" className="btn-primary" style={{ fontSize: '1rem', padding: '16px 40px' }}>
-            Create Free Account <ChevronRight size={18} />
-          </Link>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer style={{
         position: 'relative', zIndex: 2,
